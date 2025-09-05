@@ -1,0 +1,60 @@
+:root{
+  --bg:#f9fbfd;
+  --card:#ffffff;
+  --muted:#6c7a80;
+  --accent:#5a87a6;
+  --accent-2:#a6dcef;
+  --text:#14313a;
+  --radius:14px;
+  --container:1100px;
+}
+
+/* General */
+*{box-sizing:border-box;transition:all .3s ease}
+html,body{margin:0;font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+
+/* Container */
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+
+/* Navbar */
+.nav{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.05);position:sticky;top:0;z-index:50}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.logo{width:44px;height:44px;border-radius:50%;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:700}
+.menu{display:flex;gap:16px}
+.menu a{padding:8px 12px;border-radius:8px;font-weight:600;color:var(--muted)}
+.menu a:hover{background:var(--accent);color:white}
+
+/* Hero */
+.hero{padding:40px 0;background:linear-gradient(135deg,var(--accent-2),transparent)}
+.hero-inner{display:flex;gap:30px;align-items:center;justify-content:space-between;border-radius:12px;padding:24px}
+.hero-text h2{margin:0;font-size:28px}
+.cta{display:inline-block;margin-top:10px;padding:12px 18px;background:var(--accent);color:white;border-radius:10px;font-weight:700}
+.cta:hover{transform:scale(1.05)}
+.hero-img img{width:300px;max-width:100%;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.1)}
+
+/* Courses */
+.section-title{margin:10px 0 20px;font-size:22px;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 8px 20px rgba(0,0,0,0.05)}
+.card:hover{transform:translateY(-6px) scale(1.02)}
+.thumb{height:160px;border-radius:10px;overflow:hidden;margin-bottom:12px}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card h4{margin:0;font-size:18px}
+.meta{font-size:13px;color:var(--muted)}
+.btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:8px;background:var(--accent-2);color:var(--text);font-weight:700}
+.btn.primary{background:var(--accent);color:white}
+
+/* About & Contact */
+.about,.contact{padding:40px 0}
+.lead{color:var(--muted);max-width:800px;margin:0 auto}
+.contact-form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:10px;border:1px solid #dbe2e8;font-size:14px}
+.contact-form .btn{align-self:flex-start}
+
+/* Footer */
+.footer{background:var(--card);padding:20px 0;margin-top:40px;border-top:1px solid #e0e6e9}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.footer p{margin:0;color:var(--muted)}
+.socials a{margin-left:12px;color:var(--accent);font-weight:600}
+.socials i{margin-left:6px}

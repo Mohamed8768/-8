@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر فيلورا</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      direction: rtl;
+    }
+
+    /* شريط التنقل */
+    nav {
+      background: #ff4d6d;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffe0ec;
+    }
+
+    /* الهيدر */      
+header {
+  background: linear-gradient(to right, #ff4d6d, #ffcc00, #4d94ff);
+  background-repeat: no-repeat;           /* متتكررش */
+  background-position: center;            /* في النص */
+  background-size: cover;                 /* تملى الهيدر كله */
+  height: 200px;                          /* طول الهيدر (غيره حسب ما تحب) */
+  display: flex;                          /* عشان تقدر تتحكم بالمحتوى */
+  justify-content: center;                /* يخلي الكلام في النص أفقي */
+  align-items: center;                    /* يخلي الكلام في النص عمودي */
+  color: white;                           /* يخلي الكلام واضح */
+}
+
+    header h1 a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    /* المنتجات */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .product p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .product button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product button:hover {
+      background: #e63b5a;
+    }
+
+    /* الفيديو */
+    video {
+      display: block;
+      margin: 30px auto;
+      border: 3px solid #ff4d6d;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+/* صندوق القوائم */
+.details, .contact {
+  width: 80%;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-family: "Tahoma", sans-serif;
+}
+
+/* العناوين */
+.details h2, .contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff4d6d;
+  font-size: 22px;
+  border-bottom: 2px solid #ff4d6d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* تنسيق القوائم */
+.details ol, .contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details li, .contact li {
+  font-size: 17px;
+  color: #444;
+  padding: 12px 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+/* عند المرور بالماوس */
+.details li:hover, .contact li:hover {
+  background: #ffe6ec;
+  transform: translateX(5px);
+}
+
+/* الروابط */
+.contact a {
+  text-decoration: none;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+
+    /* الفوتر */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+</head>
+<body>
+
+  <!-- الناف بار -->
+  <nav>
+    <h1>🌸 متجر فيلورا 🌸</h1>
+    <ul>
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#">المنتجات</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <!-- الهيدر -->
+  <header>
+    <h1><a href="https://sllr.co/basim"><p> اطلب من<em><mark>VELORA</mark> </em></p> </a></h1>
+  </header>
+
+  <!-- المنتجات -->
+  <section class="products">
+    <div class="product">
+      <img src="صوره1.jpeg" alt="ورد">
+      <h3>ورد </h3>
+      <p>السعر: 100 جنيه</p>
+      <button onclick="window.location.href='https://wa.me/201016737230'">اشتري الآن</button>
+    </div >
+    <div class="product">
+      <img src="صوره2.jpeg" alt="منديل كتب الكتاب">
+      <h3>منديل كتب الكتاب</h3>
+      <p>السعر: 100 جنيه</p>
+      <button onclick="window.location.href='https://wa.me/201016737230'">اشتري الآن</button>
+    </div>
+    <div class="product">
+      <img src="صوره3.jpeg" alt=" تيشيرت ">
+      <h3>تيشيرت</h3>
+      <p>السعر: 200 جنيه</p>
+      <button onclick="window.location.href='https://wa.me/201016737230'">اشتري الآن</button>
+    </div>
+    <div class="product">
+      <img src="صوره4.jpeg" alt="مج">
+      <p> السعر : 150 جنيه</p>
+     <button onclick="window.location.href='https://wa.me/201016737230'">اشتري الآن</button>
+    </div>
+      <div class="product">
+       <img src="صوره5.jpeg" alt="منديل كتب الكتاب">
+      <p>السعر: 150 جنيه</p>
+      <button onclick="window.location.href='https://wa.me/201016737230'">اشتري الآن</button>
+    </div>
+      <div class="product">
+        <img src="صوره6.jpeg" alt="تابلوه">
+        <p> السعر : 100 جنيه </p>
+      <button onclick="window.location.href='https://wa.me/201016737230'">اشتري الآن</button>
+    </div>
+  </section>
+
+  <!-- الفيديو -->
+  <video controls width="500" height="400" autoplay muted loop>
+    <source src="video (2).mp4" type="video/mp4">
+  </video>
+
+  <!-- تفاصيل -->
+  <section class="details">
+    <h2>خدماتنا</h2>
+    <ol>
+      <li>🌸 velora اهلا بكم في فيلورا</li>
+      <li>☕ طباعه علي المجات</li>
+      <li>🍼 طباعه علي زمزميه المدارس</li>
+      <li>👕 طباعه علي التيشرتات</li>
+      <li>📜 طباعه علي منديل كتب الكتاب</li>
+      <li>🌹 الورد الصناعي</li>
+      <li>🖼️ البورتريه / او التابلوه</li>
+    </ol>
+  </section>
+
+  <!-- تواصل -->
+  <section class="contact">
+    <h2> 📞 تواصل معنا </h2>
+    <ul>
+      <li><a href="https://wa.me/201016737230">   01016737230 <i class="fa-brands fa-whatsapp"></i></a></li>
+      <li>🚚 الشركه مسؤوله عن اي تلف في الشحن</li>
+      <li>💖 شركه فيلورا تشكركم علي ثقتكم</li>
+    </ul>
+  </section>
+
+
+  <!-- الفوتر -->
+  <footer>
+    <p>جميع الحقوق محفوظة © متجر فيلورا 2025</p>
+  </footer>
+
+</body>
+</html>
+
